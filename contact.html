@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../Downloads/bootstrap-4.0.0/bootstrap-4.0.0/favicon.ico">
+
+        <title>X-Coffee</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/about.css">
+    </head>
+
+    <body class="text-center">
+        <div id="image-opacity" style="position: fixed"></div>
+
+        <div class="cover-container d-flex p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <h3 class="masthead-brand">X-Coffee</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="./index.html">Home</a>
+                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link" href="./location.html">Location</a>
+                        <a class="nav-link active" href="./contact.html">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" style="margin: 40px 0 50px 0;">
+                <form name="frmContact" id="" frmContact"" method="post"
+                    action="" enctype="multipart/form-data"
+                    onsubmit="return validateContactForm()">
+
+                    <div class="input-row">
+                        <label style="padding-top: 20px;">Name</label> <span
+                            id="userName-info" class="info"></span><br /> <input
+                            type="text" class="input-field" name="userName"
+                            id="userName" />
+                    </div>
+                    <div class="input-row">
+                        <label>Email</label> <span id="userEmail-info"
+                                                   class="info"></span><br /> <input type="text"
+                                                                                     class="input-field" name="userEmail" id="userEmail" />
+                    </div>
+                    <div class="input-row">
+                        <label>Subject</label> <span id="subject-info"
+                                                     class="info"></span><br /> <input type="text"
+                                                                                       class="input-field" name="subject" id="subject" />
+                    </div>
+                    <div class="input-row">
+                        <label>Message</label> <span id="userMessage-info"
+                                                     class="info"></span><br />
+                        <textarea name="content" id="content"
+                                  class="input-field" cols="60" rows="6"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" name="send" class="btn-submit"
+                               value="Send" />
+
+                        <div id="statusMessage">
+                            <?php
+                        if (! empty($message)) {
+                            ?>
+                            <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                            <?php
+                        }
+                        ?>
+                        </div>
+                    </div>
+                </form>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Copyright © X-Coffee 2021 | Facebook | Twitter | GitHub </p>
+                </div>
+            </footer>
+        </div>
+
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
